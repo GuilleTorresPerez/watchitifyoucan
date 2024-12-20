@@ -2,6 +2,7 @@ import logo from './logo.svg';
 import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
 import React from 'react';
 import Saludo from './Saludo';
+import PopularMovies from './components/popularMovies';
 
 function Home() {
   return <h1>Página de Inicio</h1>;
@@ -19,14 +20,16 @@ function App() {
           <Link to="/movies">Movies</Link>
       </nav>
 
+      <br />
+      <br />
 
-
-
-      <Routes>
-          <Route path="/" element={<Home />} />
+    <Routes>
+          <Route path="/" element={<PopularMovies />} />
           <Route path="/movies" element={<Movies />} />
       </Routes>
     </Router>
+
+
   );
 }
 
