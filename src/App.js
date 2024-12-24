@@ -1,7 +1,7 @@
 import logo from './logo.svg';
 import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
 import React from 'react';
-import Saludo from './Saludo';
+import Saludo from './components/Saludo';
 import PopularMovies from './components/popularMovies';
 
 function Home() {
