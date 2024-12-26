@@ -6,6 +6,7 @@ import tmdbService from './services/tmdbService';
 import MovieList from './components/MovieList';
 import MovieLists from './components/MovieLists';
 import SearchBar from './components/searchBar';
+import ResultList from './components/ResultList';
 
 function Home() {
   return <MovieLists />;
@@ -16,6 +17,7 @@ function Movies() {
 }
 
 function App() {
+  const [searchResults, setSearchResults] = useState([]);
 
   const onSearch = async (query) => {
 
@@ -23,7 +25,8 @@ function App() {
 
     try {
       const results = await tmdbService.searchMovies(query);
-      console.log(results);
+      // console.log(results);
+      setSearchResults(results.results);
     } catch (error) {
       console.error('Error searching movies:', error);
     }
@@ -45,6 +48,9 @@ function App() {
 
 
       {/* <MovieList title="Popular Movies" movies={popularMovies} /> */}
+      {searchResults.length > 0 && (
+        <ResultList title="Search Results" movies={searchResults} />
+      )}
 
     <Routes>
           <Route path="/" element={<Home />} />

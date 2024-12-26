@@ -32,7 +32,7 @@ export const getPopularMovies = async (page = 1) => {
 };
 
 export const searchMovies = async (query) => {
-    return "hola buenas desde searchMovies";
+    return makeRequest('/search/movie', { query, api_key: API_KEY });
 }
 
 export default {
