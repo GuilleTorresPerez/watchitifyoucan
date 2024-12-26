@@ -1,7 +1,9 @@
 import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 
-const SearchBar = ({ onSearch }) => {
+const SearchBar = () => {
   const [query, setQuery] = useState('');
+  const navigate = useNavigate();
 
   const handleChange = (e) => {
     setQuery(e.target.value);
@@ -9,8 +11,10 @@ const SearchBar = ({ onSearch }) => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    onSearch(query); // Llamar a la función onSearch con el valor de la búsqueda
-  };
+    if (query.trim()) {
+      navigate('/search?q=' + query);
+    }
+};
 
   return (
     <form onSubmit={handleSubmit}>

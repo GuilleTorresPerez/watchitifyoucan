@@ -7,57 +7,23 @@ import MovieList from './components/MovieList';
 import MovieLists from './components/MovieLists';
 import SearchBar from './components/searchBar';
 import ResultList from './components/ResultList';
-
-function Home() {
-  return <MovieLists />;
-}
-
-function Movies() {
-  return <h1>This is a list of movies</h1>;
-}
+import Home from './pages/Home';
 
 function App() {
-  const [searchResults, setSearchResults] = useState([]);
-
-  const onSearch = async (query) => {
-
-    if (!query) return;
-
-    try {
-      const results = await tmdbService.searchMovies(query);
-      // console.log(results);
-      setSearchResults(results.results);
-    } catch (error) {
-      console.error('Error searching movies:', error);
-    }
-  };
-
-
-
   return (
     <Router>
-      <nav>
+      <header>
+        <nav>
           <Link to="/">WatchMeIfYouCan</Link>
           <Link to="/movies">Movies</Link>
-      </nav>
-
-      <br />
-      <br />
-
-      <SearchBar onSearch={onSearch}/>
-
-
-      {/* <MovieList title="Popular Movies" movies={popularMovies} /> */}
-      {searchResults.length > 0 && (
-        <ResultList title="Search Results" movies={searchResults} />
-      )}
-
-    <Routes>
-          <Route path="/" element={<Home />} />
+        </nav>
+        <SearchBar />
+      </header>
+      <Routes>
+        <Route path="/" element={<MovieLists />} />
+        <Route path="/search" element={<ResultList />} />
       </Routes>
     </Router>
-
-
   );
 }
 

@@ -33,24 +33,7 @@ const MovieLists = () => {
   return (
 
     <MovieList title="Popular Movies" movies={popularMovies} />  
-    //   {/* Buscador */}
-    //   <form onSubmit={handleSearch}>
-    //     <input
-    //       type="text"
-    //       value={searchQuery}
-    //       onChange={(e) => setSearchQuery(e.target.value)}
-    //       placeholder="Search for a movie..."
-    //     />
-    //     <button type="submit">Search</button>
-    //   </form>
-
-    //   {/* Condicionar la visualización de listas */}
-    //   {searchResults.length > 0 ? (
-    //     <MovieList title="Search Results" movies={searchResults} />
-    //   ) : (
-    //     <MovieList title="Popular Movies" movies={popularMovies} />
-    //   )}
-    // </div>
+    
   );
 };
 

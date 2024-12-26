@@ -74,12 +74,12 @@ Divide el trabajo en semanas con entregables específicos.
 1. Configura el routing básico (React Router o Vue Router).
 2. Consume el endpoint `/movie/popular` y muestra una lista de películas.
    - Incluye título, imagen y fecha de lanzamiento.
-3. Agrega un spinner o placeholder para cargas.
+3. *******Agrega un spinner o placeholder para cargas.
 
 #### **Semana 2: Buscador y Filtros**
 1. Implementa el buscador:
    - Usa el endpoint `/search/movie`.
-2. Implementa filtros por género usando `/genre/movie/list`.
+2.***** Implementa filtros por género usando `/genre/movie/list`.
 3. Asegúrate de manejar errores (por ejemplo, búsqueda sin resultados).
 
 #### **Semana 3: Página de Detalles**
