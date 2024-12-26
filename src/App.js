@@ -5,6 +5,7 @@ import React, { useEffect, useState } from 'react';
 import tmdbService from './services/tmdbService';
 import MovieList from './components/MovieList';
 import MovieLists from './components/MovieLists';
+import SearchBar from './components/searchBar';
 
 function Home() {
   return <MovieLists />;
@@ -15,6 +16,21 @@ function Movies() {
 }
 
 function App() {
+
+  const onSearch = async (query) => {
+
+    if (!query) return;
+
+    try {
+      const results = await tmdbService.searchMovies(query);
+      console.log(results);
+    } catch (error) {
+      console.error('Error searching movies:', error);
+    }
+  };
+
+
+
   return (
     <Router>
       <nav>
@@ -24,6 +40,9 @@ function App() {
 
       <br />
       <br />
+
+      <SearchBar onSearch={onSearch}/>
+
 
       {/* <MovieList title="Popular Movies" movies={popularMovies} /> */}
 
