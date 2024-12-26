@@ -35,7 +35,12 @@ export const searchMovies = async (query) => {
     return makeRequest('/search/movie', { query, api_key: API_KEY });
 }
 
+export const getMovieDetails = async (id) => {
+    return makeRequest(`/movie/${id}`, { api_key: API_KEY  });
+}
+
 export default {
     getPopularMovies,
     searchMovies,
+    getMovieDetails,
 };

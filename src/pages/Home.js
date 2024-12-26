@@ -1,6 +1,6 @@
 import React from 'react';
 import MovieLists from '../components/MovieLists';
-import ResultList from '../components/ResultList';
+import ResultList from './SearchResults';
 
 const Home = ({ searchResults, isSearching }) => {
   return (

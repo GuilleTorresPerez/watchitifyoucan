@@ -6,8 +6,9 @@ import tmdbService from './services/tmdbService';
 import MovieList from './components/MovieList';
 import MovieLists from './components/MovieLists';
 import SearchBar from './components/searchBar';
-import ResultList from './components/ResultList';
+import ResultList from './pages/SearchResults';
 import Home from './pages/Home';
+import MovieInfo from './pages/MovieInfo';
 
 function App() {
   return (
@@ -22,6 +23,7 @@ function App() {
       <Routes>
         <Route path="/" element={<MovieLists />} />
         <Route path="/search" element={<ResultList />} />
+        <Route path="/movie/:id" element={<MovieInfo />} />
       </Routes>
     </Router>
   );

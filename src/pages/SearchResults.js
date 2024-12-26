@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { useSearchParams } from 'react-router-dom'; // Importar useSearchParams
 import tmdbService from '../services/tmdbService';
+import SearchMovieItem from '../components/SearchMovieItem';
 
 const SearchResults = () => {
   const [searchParams] = useSearchParams(); // Obtener los parámetros de búsqueda
@@ -32,12 +33,7 @@ const SearchResults = () => {
       <div className="movie-list">
         {movies.map((movie) => (
           <div key={movie.id} className="movie-item">
-            <img
-              src={`https://image.tmdb.org/t/p/w200${movie.poster_path}`}
-              alt={movie.title}
-            />
-            <h3>{movie.title}</h3>
-            <p>{movie.overview}</p>
+            <SearchMovieItem movie={movie} />
           </div>
         ))}
       </div>
