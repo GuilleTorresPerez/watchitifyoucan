@@ -4,8 +4,6 @@ import MovieList from './MovieList';
 
 const MovieLists = () => {
   const [popularMovies, setPopularMovies] = useState([]);
-  const [searchQuery, setSearchQuery] = useState('');
-  const [searchResults, setSearchResults] = useState([]);
 
   // Cargar películas populares al montar el componente
   useEffect(() => {
@@ -16,19 +14,6 @@ const MovieLists = () => {
     };
     loadMovies();
   }, []);
-
-  // Manejo de búsqueda
-  const handleSearch = async (e) => {
-    e.preventDefault();
-    if (searchQuery.trim() === '') return;
-
-    try {
-      const results = await tmdbService.searchMovies(searchQuery);
-      setSearchResults(results.results || []);
-    } catch (error) {
-      console.error('Error searching movies:', error);
-    }
-  };
 
   return (
 
