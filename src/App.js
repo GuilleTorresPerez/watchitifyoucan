@@ -9,9 +9,12 @@ import MovieInfo from './pages/MovieInfo';
 function App() {
   return (
     <Router>
-      <header class="flex justify-between">
-        <nav>
-          <Link to="/">WatchMeIfYouCan</Link>
+      <header class="flex justify-between items-center bg-[rgb(33,53,85)] text-white px-28 py-6 gap-12 text-xl">
+        <nav class="flex gap-12 text-xl items-center font-bold">
+          <Link to="/">
+            <img class="w-16 h-auto" src="/logo.png" alt="WatchMeIfYouCan" />
+          </Link>
+          <Link to="/">WatchItIfYouCan</Link>
           <Link to="/">Home</Link>
           <Link to="/movies">Movies</Link>
         </nav>
