@@ -23,7 +23,7 @@ const SearchBar = () => {
         value={query}
         onChange={handleChange}
         placeholder="Search for a movie..."
-        className="flex-1 bg-[rgb(33,53,85)] rounded-lg focus:outline-none border-b-2 border-transparent focus:border-[rgb(62,88,121)]"
+        className="flex-1 bg-[rgb(33,53,85)] focus:outline-none border-b-2 border-transparent border-[rgb(62,88,121)]"
       />
       <button
         type="submit"
