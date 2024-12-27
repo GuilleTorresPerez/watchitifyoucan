@@ -7,7 +7,7 @@ const MovieList = ({ title, movies }) => {
   return (
     <div>
       <h2>{title}</h2>
-      <div className="movie-list">
+      <div class="flex">
       {movies.results?.map((movie) => (
         <MovieItem key={movie.id} movie={movie} />
       ))}

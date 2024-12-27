@@ -9,7 +9,7 @@ import MovieInfo from './pages/MovieInfo';
 function App() {
   return (
     <Router>
-      <header>
+      <header class="flex justify-between">
         <nav>
           <Link to="/">WatchMeIfYouCan</Link>
           <Link to="/">Home</Link>

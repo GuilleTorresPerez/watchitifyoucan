@@ -39,10 +39,15 @@ export const getMovieDetails = async (id) => {
     return makeRequest(`/movie/${id}`, { api_key: API_KEY  });
 }
 
+export const getTopRatedMovies = async () => {
+    return makeRequest('/movie/top_rated', { api_key: API_KEY });
+}
+
 const tmdbService = {
     getPopularMovies,
     searchMovies,
     getMovieDetails,
+    getTopRatedMovies,
 };
 
 export default tmdbService;
