@@ -43,11 +43,16 @@ export const getTopRatedMovies = async () => {
     return makeRequest('/movie/top_rated', { api_key: API_KEY });
 }
 
+export const getUpcomingMovies = async () => {
+    return makeRequest('/movie/upcoming', { api_key: API_KEY });
+}
+
 const tmdbService = {
     getPopularMovies,
     searchMovies,
     getMovieDetails,
     getTopRatedMovies,
+    getUpcomingMovies,
 };
 
 export default tmdbService;

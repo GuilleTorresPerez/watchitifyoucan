@@ -5,6 +5,7 @@ import MovieList from './MovieList';
 const MovieLists = () => {
   const [popularMovies, setPopularMovies] = useState([]);
   const [topRatedMovies, setTopRatedMovies] = useState([]);
+  const [upcomingMovies, setUpcomingMovies] = useState([]);
 
   // Cargar películas populares al montar el componente
   useEffect(() => {
@@ -20,15 +21,23 @@ const MovieLists = () => {
       setTopRatedMovies(topRated || []);
     };
 
+    const loadUpcomingMovies = async () => {
+      const upcoming = await tmdbService.getUpcomingMovies();
+      // console.log(upcoming);
+      setUpcomingMovies(upcoming || []);
+    };
+
     // Cargar películas mejor valoradas al montar el componente
     loadPopularMovies();
     loadTopRatedMovies();
+    loadUpcomingMovies();
   }, []);
 
   return (
     <div>
       <MovieList title="Popular Movies" movies={popularMovies} />  
       <MovieList title="Top Rated Movies" movies={topRatedMovies} />
+      <MovieList title="Upcoming Movies" movies={upcomingMovies} />
     </div>
   );
 };
