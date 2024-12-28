@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 
 const SearchMovieItem = ({ movie }) => {
     return (
-        <div className="flex items-start border w-auto h-[200px] border-gray-300 p-3 rounded shadow-sm bg-white">
+        <div className="flex items-start border w-auto h-[200px] border-gray-800 p-3 rounded-lg shadow-sm bg-gray-900">
             <Link to={`/movie/${movie.id}`} className='flex-shrink-0'>
                 <img src={`https://image.tmdb.org/t/p/w200${movie.poster_path}`} alt={movie.title} 
                 className='h-[176px] w-auto aspect-[2/3] object-cover rounded-lg'/>

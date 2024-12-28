@@ -28,7 +28,7 @@ const SearchResults = () => {
   }
 
   return (
-    <div className="px-28 py-6">
+    <div className="px-28 py-6 bg-gray-900 text-white">
       <h2 className="text-2xl font-bold mb-4">Search Results for "{query}"</h2>
       <div className='flex flex-col gap-5'>
         {movies.map((movie) => (

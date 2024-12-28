@@ -6,7 +6,7 @@ import MovieItem from './MovieItem';
 const MovieList = ({ title, movies }) => {
   return (
     <div>
-      <h2 className="text-2xl font-bold mb-4">{title}</h2>
+      <h2 className="text-2xl font-bold mb-4 text-white">{title}</h2>
       <div className="flex overflow-x-auto gap-8">
       {movies.results?.map((movie) => (
         <MovieItem key={movie.id} movie={movie} />
