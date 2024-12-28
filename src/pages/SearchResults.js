@@ -28,11 +28,11 @@ const SearchResults = () => {
   }
 
   return (
-    <div>
-      <h2>Search Results for "{query}"</h2>
-      <div className="movie-list">
+    <div className="px-28 py-6">
+      <h2 className="text-2xl font-bold mb-4">Search Results for "{query}"</h2>
+      <div className='flex flex-col gap-5'>
         {movies.map((movie) => (
-          <div key={movie.id} className="movie-item">
+          <div key={movie.id}>
             <SearchMovieItem movie={movie} />
           </div>
         ))}
