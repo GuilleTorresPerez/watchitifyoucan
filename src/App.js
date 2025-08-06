@@ -16,7 +16,7 @@ function App() {
           </Link>
           <Link to="/">WatchItIfYouCan</Link>
           <Link to="/">Home</Link>
-          <Link to="/movies">Movies</Link>
+          <Link to="/">Movies</Link>
         </nav>
         <SearchBar />
       </header>
