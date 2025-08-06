@@ -13,6 +13,10 @@ Movie search app built with **React + React Router**, styled with utility classe
 - **Details page**: Clicking a movie takes you to `/movie/:id` with full info (poster, overview, date, rating, genres).  
 - **Routing**: Handled with React Router (`/`, `/search`, `/movie/:id`).
 
+## 📽️ Demo
+
+![Demo](docs/watchitifyoucan.gif)
+
 ---
 
 ## 🧩 Features
